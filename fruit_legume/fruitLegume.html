@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                width: 650px;
+            }
+
+            #identifie1 {
+                display: inline-block;
+                background-color: #d3d3d3;
+                width: 300px;
+                border: double;
+                font-family: Verdana, sans-serif;
+                font-size: 1em;
+                display: inline-block;
+                padding: 1%;
+            }
+            
+            #identifie1 fieldset {
+                background-color: #f5f5f5;
+                border: 1px dotted #000;
+                padding: 10px;
+            }
+
+            #identifie1 legend {
+                border: 1px dotted #000;
+                background-color: #f5f5f5;
+                margin-top: 5px;
+                padding: 5px;
+            }
+
+            #identifie1 input[type="number"] {
+                width: 70%;
+
+            }
+
+            #identifie1 select {
+                width: 33%;
+                border: 1px solid #000;
+                outline:none;
+                overflow-y: hidden;
+                margin: 0;
+                
+            }
+
+            #selec {
+                display: flex;
+            }
+
+            .bouttons {
+                width: 100px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-end;
+                gap: 5px;
+                position: relative; /* Ajout de cette ligne */
+                padding: 5px;
+            }
+
+            .bouttons button {
+                width: 100%; /* Les boutons prennent toute la largeur */
+                 /* Espacement interne */
+            }
+
+            #identifie2 {
+                background-color: #d3d3d3;
+                width: 310px;
+                border: double;
+                font-family: Verdana, sans-serif;
+                font-size: 1em;
+                display: inline-block;
+                vertical-align: top;
+            }
+            
+            #identifie2 fieldset {
+                background-color: #f5f5dc;
+                border: double;
+            }
+
+
+            #identifie2 legend {    
+                text-align: center;
+            }
+
+            #identifie2 select {
+                width: 48%; 
+                margin-right: 4%;
+            }
+            
+            #identifie2 table {
+                width: 100%;
+            }
+
+            #identifie2 p {
+                display: inline-block;
+                margin: 0;
+            }
+
+            #identifie2 .titre td {
+                font-style: italic;
+                width: 25%;
+                border-bottom: 1px solid black;
+            }
+
+            #identifie2 .align-right {
+                text-align: right;
+            }
+
+            #identifie2 tfoot {
+                
+                border: double;
+                text-align: right;
+            }
+
+            #identifie2 .bg {
+                color: blue;
+                text-align: right;
+                font-weight: bold;
+            }
+
+            .bottom-cell {
+                border: double;
+                width: 10%;
+                text-align: right;
+                font-weight: bold;
+            }
+
+            .txt {
+                color: red;
+            }
+
+            select {
+                align-self: flex-start;
+            }
+        </style>
+        <script src="./utils.js"></script>
+        <script src="./fruitLegume.js"></script>
+    </head>
+    <body onload="init()">
+        <div id="identifie1">
+            <form>
+                <fieldset>
+                  <legend>pesez votre article</legend>
+                  <label for="poids">Poids :</label>
+                  <input type="number" id="poids" name="poids" min="50" max="10000" step="10" required placeholder="entre 50g et 10kg">
+                </fieldset>
+                <fieldset id="selec">
+                    <legend>sélectionnez l'article</legend>
+                    <select id="liste1" size="2">
+                        <option value="ananas">ananas</option>
+                    </select>
+                    <select id="liste2" size="2">
+                        <option value="2.99">2.99</option>
+                    </select>
+                    <div class="bouttons">
+                        <button>Ajouter</button>
+                        <button>Enlever</button>
+                        <button>Imprimer</button>
+                        <button>Effacer</button>
+                    </div>
+                </fieldset>
+              </form>
+        </div>
+        <div id="identifie2">
+            <legend>synthèse de vos achats</legend>
+            <fieldset>
+                <table>
+                    <thead>
+                        <tr class="titre">
+                            <td>article</td>
+                            <td class="align-right">prix</td>
+                            <td class="align-right">qté(kg)</td>
+                            <td class="align-right">total</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <!--<td>ok</td>
+                            <td class="align-right">ok</td>
+                            <td class="align-right">ok</td>
+                            <td class="bg">ok</td>-->
+                        </tr>
+                        <tr>
+                            <!-- <td>ok</td>
+                            <td class="align-right">ok</td>
+                            <td class="align-right">ok</td>
+                            <td class="bg">ok</td> -->
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <td colspan="3"></td>
+                        <td class="bottom-cell"><span class="txt"></span></td>
+                    </tfoot>
+                </table>   
+            </fieldset>
+        </div>
+    </body>
+</html>
