@@ -18,4 +18,7 @@ function init() {
     setElem("liste2" , optPrice)
     refElem('liste1').size = fruits.length 
     refElem('liste2').size = fruits.length 
+
+    selectElem1.setAttribute('required', 'required');
+    selectElem2.setAttribute('required', 'required');
 }
