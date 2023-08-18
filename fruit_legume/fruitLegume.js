@@ -10,9 +10,9 @@ function init() {
     })
     let optName ="";
     let optPrice = "";
-    for(let i of fruits) {
-        optName += "<option>" + i.fruit + "</option>"
-        optPrice += "<option>" + i.prix + "</option>"
+    for(let i in fruits) {
+        optName += "<option>" + fruits[i].fruit + "</option>"
+        optPrice += "<option>" + fruits[i].prix + "</option>"
     }
     setElem("liste1" , optName)
     setElem("liste2" , optPrice)
