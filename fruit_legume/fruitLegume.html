@@ -127,7 +127,7 @@
                 font-weight: bold;
             }
 
-            .txt {
+            #txt {
                 color: red;
             }
 
@@ -155,7 +155,7 @@
                         <option value="2.99">2.99</option>
                     </select>
                     <div class="bouttons">
-                        <button>Ajouter</button>
+                        <button type="submit" onclick="ajouterFruit(event)">Ajouter</button>
                         <button>Enlever</button>
                         <button>Imprimer</button>
                         <button>Effacer</button>
@@ -175,23 +175,11 @@
                             <td class="align-right">total</td>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <!--<td>ok</td>
-                            <td class="align-right">ok</td>
-                            <td class="align-right">ok</td>
-                            <td class="bg">ok</td>-->
-                        </tr>
-                        <tr>
-                            <!-- <td>ok</td>
-                            <td class="align-right">ok</td>
-                            <td class="align-right">ok</td>
-                            <td class="bg">ok</td> -->
-                        </tr>
+                    <tbody id="aff">
                     </tbody>
                     <tfoot>
                         <td colspan="3"></td>
-                        <td class="bottom-cell"><span class="txt"></span></td>
+                        <td class="bottom-cell"><span id="txt"></span></td>
                     </tfoot>
                 </table>   
             </fieldset>
