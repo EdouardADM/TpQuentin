@@ -22,11 +22,18 @@ function init() {
     let elem1 = refElem('liste1');
     let elem2 = refElem('liste2');
 
-    elem1.addEventListener('change', function() {
-        elem2.selectedIndex = elem1.selectedIndex
-    })
+    elem1.addEventListener('change', synchroSelect); 
+    elem2.addEventListener('change', synchroSelect);
+}
 
-    elem2.addEventListener('change', function() {
-        elem1.selectedIndex = elem2.selectedIndex
-    })
+function synchroSelect(event) {
+    let elem1 = refElem('liste1');
+    let elem2 = refElem('liste2');
+
+    if(event.target === elem1) {
+        elem2.selectedIndex = elem1.selectedIndex
+    }
+    else if (event.target === elem2) {
+            elem1.selectedIndex = elem2.selectedIndex
+    }
 }
