@@ -19,6 +19,14 @@ function init() {
     refElem('liste1').size = fruits.length 
     refElem('liste2').size = fruits.length 
 
-    selectElem1.setAttribute('required', 'required');
-    selectElem2.setAttribute('required', 'required');
+    let elem1 = refElem('liste1');
+    let elem2 = refElem('liste2');
+
+    elem1.addEventListener('change', function() {
+        elem2.selectedIndex = elem1.selectedIndex
+    })
+
+    elem2.addEventListener('change', function() {
+        elem1.selectedIndex = elem2.selectedIndex
+    })
 }
