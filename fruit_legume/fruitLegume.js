@@ -89,13 +89,11 @@ function affichage () {
     total =0;
     for(let i of commande) {
         let s = '<tr>'
-        let t = +((i.prix * i.poid).toFixed(2));
+        let t = +((i.prix * i.poid)).toFixed(2);
         s += '<td>' + i.lib + '</td>' + '<td>' + i.prix + '</td>' + '<td>' + i.poid + '</td>' + '<td>' + t + '</td></tr>';
         lignes += s;
         total += t;
     }
-
-
     setElem('aff', lignes)
     setElem('txt', total)
 }

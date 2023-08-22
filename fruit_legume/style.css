@@ -2,6 +2,10 @@ body {
     width: 650px;
 }
 
+#printCode {
+    display: none;
+}
+
 #identifie1 {
     display: inline-block;
     background-color: #d3d3d3;

@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="print.css" media="print">
         <script src="./utils.js"></script>
         <script src="./fruitLegume.js"></script>
+        <script src="./connectcode-javascript-code39.js"></script>
     </head>
     <body onload="init()">
         <div id="identifie1">
@@ -54,6 +55,14 @@
                     </tfoot>
                 </table>   
             </fieldset>
+            <div id="printCode">
+                <div id="barcode">
+                    123456
+                </div>
+            </div>
+            <script>refElem("barcode").innerHTML=DrawHTMLBarcode_Code39(refElem("barcode").innerHTML,1,"yes","in",0,3,1,3,"bottom","center","","black","white");</script>
         </div>
     </body>
 </html>
+
+
