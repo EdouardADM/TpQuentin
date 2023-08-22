@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="./tpBibli.js"></script>
+    <link rel="stylesheet" href="./tpBiBli.css" >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliothèque</title>
+</head>
+<body>
+    <form id="page">
+        <legend><strong>Catalogue de la bibliothèque</strong></legend>
+        <fieldset>
+            <div id="divRadio">
+                <label>Tri par :</label>
+                <input id="bouttonRef" type="radio" name="bouttons" value="ref"/> <label for="bouttonRef">ref</label>
+                <input id="bouttonAuteur" type="radio" name="bouttons" value="auteur"/> <label for="bouttonAuteur">auteur</label>
+                <input id="bouttonTitre" type="radio" name="bouttons" value="titre" /> <label for="bouttonTitre">titre</label>
+            </div>
+        </fieldset>
+        <div id="Bibli">
+            <table id="tableA">
+                <thead>
+                    <tr>
+                        <td id="ref">ref</td>
+                        <td id="auteur">auteur</td>
+                        <td id="titre">titre</td>
+                    </tr>
+                </thead>
+                <table id="tableB">
+                    <thead>
+                        <tr>
+                            <td id="ref">ref</td>
+                            <td id="auteur">auteur</td>
+                            <td id="titre">titre</td>
+                            <td id="depuis">depuis</td>
+                        </tr>
+                    </thead>
+                </table>
+            </table>
+        </div>
+        <div id="input">
+            <div id="inputE">
+                <input type="text" id="emprun"/><button name="emprun">Emprunter</button>
+            </div> 
+            <div id="inputR">
+                   <input type="text" id="rendre"/><button name="rendre">Rendre</button>       
+            </div>
+        </div>    
+    </form>
+
+</body>
+</html>
